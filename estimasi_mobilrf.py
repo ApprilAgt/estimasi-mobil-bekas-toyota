@@ -68,8 +68,8 @@ if st.button('Estimasi Harga'):
             logging.debug(f"Input Data: {input_data}")
 
             prediction = model.predict(input_data)
-            prediction_idr = max(prediction[0], 0)
-            prediction_gbp = prediction_idr / 19000
+            prediction_idr = max(int(round(prediction[0])), 0)
+            prediction_gbp = round(prediction_idr / 19000)
 
             st.write('Estimasi harga mobil bekas dalam IDR:', prediction_idr)
             st.write('Estimasi harga mobil bekas dalam Poundsterling:', prediction_gbp)
