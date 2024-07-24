@@ -74,7 +74,7 @@ if st.button('Estimasi Harga'):
             st.write('Estimasi harga mobil bekas dalam IDR:', prediction_idr)
             st.write('Estimasi harga mobil bekas dalam Poundsterling:', prediction_gbp)
         except ValueError as e:
-            st.warning('Harap masukkan angka yang valid untuk setiap input')
+            st.warning('HARAP MASUKKAN ANGKA YANG VALID UNTUK SETIAP INPUT')
             st.error(f"ValueError: {e}")
         except Exception as e:
             st.error(f"Terjadi kesalahan: {e}")
