@@ -46,7 +46,7 @@ engineSize_input = st.text_input('Ukuran Mesin (dalam L)', '')
 
 if st.button('Estimasi Harga'):
     if year_input == '' or mileage_input == '' or tax_input == '' or mpg_input == '' or engineSize_input == '':
-        st.warning('Harap lengkapi semua input sebelum menekan tombol "Estimasi Harga"')
+        st.warning('HARAP LENGKAPI SEMUA INPUT SEBELUM MENEKAN TOMBOL "Estimasi Harga"')
     else:
         try:
             year = int(year_input)
