@@ -33,7 +33,7 @@ reverse_model_mapping = {k: model_mapping.inverse_transform([k])[0] for k in ran
 reverse_transmission_mapping = {k: transmission_mapping.inverse_transform([k])[0] for k in range(len(transmission_mapping.classes_))}
 reverse_fuelType_mapping = {k: fuelType_mapping.inverse_transform([k])[0] for k in range(len(fuelType_mapping.classes_))}
 
-st.title('Estimasi Harga Mobil Bekas Toyota')
+st.title('Prediksi Harga Mobil Bekas Toyota')
 
 # Input untuk atribut mobil
 model_input = st.selectbox('Model Mobil', list(reverse_model_mapping.values()))
@@ -47,7 +47,7 @@ engineSize_input = st.text_input('Ukuran Mesin (dalam L)', '')
 
 if st.button('Estimasi Harga'):
     if year_input == '' or mileage_input == '' or tax_input == '' or mpg_input == '' or engineSize_input == '':
-        st.warning('HARAP LENGKAPI SEMUA INPUT SEBELUM MENEKAN TOMBOL "Estimasi Harga"')
+        st.warning('HARAP LENGKAPI SEMUA INPUT SEBELUM MENEKAN TOMBOL "Prediksi Harga"')
     else:
         try:
             year = int(year_input)
