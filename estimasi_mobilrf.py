@@ -45,7 +45,7 @@ fuelType_input = st.selectbox('Jenis Bahan Bakar', list(reverse_fuelType_mapping
 mpg_input = st.text_input('Konsumsi BBM Mobil (dalam mpg)', '')
 engineSize_input = st.text_input('Ukuran Mesin (dalam L)', '')
 
-if st.button('Estimasi Harga'):
+if st.button('Prediksi Harga'):
     if year_input == '' or mileage_input == '' or tax_input == '' or mpg_input == '' or engineSize_input == '':
         st.warning('HARAP LENGKAPI SEMUA INPUT SEBELUM MENEKAN TOMBOL "Prediksi Harga"')
     else:
@@ -80,8 +80,8 @@ if st.button('Estimasi Harga'):
             prediction_idr_formatted = f"Rp {prediction_idr:,.0f}"
             prediction_gbp_formatted = f"£{prediction_gbp:,}"
 
-            st.write('Estimasi harga mobil bekas dalam IDR:', prediction_idr_formatted)
-            st.write('Estimasi harga mobil bekas dalam Poundsterling:', prediction_gbp_formatted)
+            st.write('Prediksi harga mobil bekas dalam IDR:', prediction_idr_formatted)
+            st.write('Prediksi harga mobil bekas dalam Poundsterling:', prediction_gbp_formatted)
         except ValueError as e:
             st.warning('HARAP MASUKKAN ANGKA YANG VALID UNTUK SETIAP INPUT')
             st.error(f"ValueError: {e}")
